@@ -1,0 +1,9 @@
+reviewers:
+  - name: imyass59
+ignore:
+  titles: # Ignore PR if PR's title contains these words
+    - "WIP"
+    - "Draft"
+    - "DO NOT MERGE"
+    - "WIP:"
+    - "wip"
