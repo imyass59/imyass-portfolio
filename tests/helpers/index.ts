@@ -32,3 +32,13 @@ export const getMockResponse = ({
     body: body ?? null,
   }
 }
+
+export const getContext = (headers?: any, params?: any, query?: any) => {
+  return {
+    req: {
+      headers,
+    },
+    params,
+    query,
+  } as unknown as any
+}

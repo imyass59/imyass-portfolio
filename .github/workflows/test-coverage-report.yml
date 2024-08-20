@@ -9,6 +9,12 @@ jobs:
     if: github.actor != 'dependabot[bot]'
     steps:
       - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install
+      - name: Print Jest version and configuration
+        run: |
+          npx jest --version
+          cat jest.config.js
       - uses: ArtiomTr/jest-coverage-report-action@v2
         with:
           custom-title: Test coverage report (Jest)
