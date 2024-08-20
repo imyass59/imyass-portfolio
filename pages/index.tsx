@@ -1,9 +1,14 @@
-import Image from "next/image"
-import { Inter } from "next/font/google"
+import { GetServerSideProps, InferGetServerSidePropsType } from "next"
 
-const inter = Inter({ subsets: ["latin"] })
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    props: {},
+  }
+}
 
-export default function Home() {
+export default function Home({}: InferGetServerSidePropsType<
+  typeof getServerSideProps
+>) {
   return (
     <main>
       <h1>Imyass Portfolio</h1>
