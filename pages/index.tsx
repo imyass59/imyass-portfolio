@@ -18,6 +18,7 @@ export default function Home({}: InferGetServerSidePropsType<
   return (
     <>
       <DefaultSEO SEOdata={SEO} />
+      <h1>Imyass Portfolio</h1>
     </>
   )
 }
