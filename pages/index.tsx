@@ -1,3 +1,4 @@
+import DefaultSEO from "@/components/DefaultSEO/DefaultSEO"
 import { GetServerSideProps, InferGetServerSidePropsType } from "next"
 
 export const getServerSideProps: GetServerSideProps = async () => {
@@ -9,9 +10,14 @@ export const getServerSideProps: GetServerSideProps = async () => {
 export default function Home({}: InferGetServerSidePropsType<
   typeof getServerSideProps
 >) {
+  const SEO = {
+    title: "Home",
+    description: "This is the home page",
+  }
+
   return (
-    <main>
-      <h1>Imyass Portfolio</h1>
-    </main>
+    <>
+      <DefaultSEO SEOdata={SEO} />
+    </>
   )
 }
